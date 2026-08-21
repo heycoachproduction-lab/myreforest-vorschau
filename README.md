@@ -2,9 +2,8 @@
 
 Entwurfsfassung zur Abstimmung. **Nicht die Live-Website.**
 
-Statische Kopie von myreforest.org mit den Änderungen vom 19. August 2026.
-An der Live-Website wurde nichts verändert.
+Stand 21. August 2026. Enthält die Rückmeldungen von Andrea vom 21.08.:
+Logogrößen ausgeglichen, Spendenknopf auf der Karte, größerer und
+mitlaufender Spendenknopf, Menüpunkt umbenannt, Projektauswahl mit Vorschau.
 
-- Suchmaschinen ausgeschlossen (`robots.txt`, `noindex`)
-- Bilder werden weiterhin von myreforest.org geladen
-- Karte, Sprachumschalter und Menüs funktionieren wie im Original
+An der Live-Website wurde nichts verändert.

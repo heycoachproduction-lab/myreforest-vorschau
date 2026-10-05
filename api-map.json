@@ -1,10 +1,10 @@
 {
- "/wp-json/complianz/v1/manage_consent_html?lang=de&locale=de_DE&token=omxbk": "api/b2b720aa675c.json",
- "/wp-json/wp/v2/project?include=5616,5669,5618,5620,5625,5725,5726,5764,5626,5627,5733,5630,5631,5639,5701,5641,5643,5647,5648,5649,5651,5650,5655,5656,5657,5757,5672,5673,5675,5499&per_page=100&_fields=id,title,excerpt,featured_media": "api/e740547e9b32.json",
- "/wp-json/wp/v2/media?include=5763,5756,5732,1906,1364,4970,4411,5061,4069,5663,626,4658,5591,793,5284,4818,3676,4073,3857,5471,5719,5416,5409,3238,4846,4814,4771,4271,4384,4266&per_page=100&_fields=id,media_details": "api/2a54288f2e74.json",
+ "/wp-json/complianz/v1/manage_consent_html?lang=de&locale=de_DE&token=ffkhc": "api/251ff843ba23.json",
+ "/wp-json/wp/v2/project?include=6030,5616,5669,5618,5620,5625,5983,5764,5977,5627,6019,5733,5630,5631,5639,5701,5987,5641,5643,5647,6021,5648,5649,5651,5650,5655,5656,5657,5757,5672,5673,5675,5499,5852&per_page=100&_fields=id,title,excerpt,featured_media": "api/fff896b8dacf.json",
+ "/wp-json/wp/v2/media?include=4198,5909,5442,2678,5982,5946,5848,5763,5756,5732,4970,4411,5061,4069,5663,626,4658,5591,793,5284,4818,3676,4073,3857,5471,5719,5416,5409,3238,4814,4771,4271,4384,4266&per_page=100&_fields=id,media_details": "api/08f5300bbc86.json",
  "/wp-json/cf7-antispam/v1/get-timestamp": "api/8ab9d5564a74.json",
  "/wp-json/contact-form-7/v1/contact-forms/2340/feedback/schema": "api/45a68fad555a.json",
  "/wp-json/wp/v2/project?_fields=id%2Ctitle%2Cmeta&categories=5&per_page=100&_locale=user": "api/2ff6c07a6eb8.json",
- "/wp-json/wp/v2/project?include=1692,2599,3258,4767,4810,5759,4678,3234,5727,5404,5411,4904,2149,5423,3856,4072,3670,4815,262,4195,5587,4006,622,5752,4064,3897,2875,3028&per_page=100&_fields=id,title,excerpt,featured_media": "api/4dd6019d1d12.json",
- "/wp-json/wp/v2/media?include=5763,5756,5732,5591,5471,5416,5409,5719,4970,5674,5284,4818,4814,4771,4846,5671,4266,4073,4069,4658,3857,3676,4271,3238,4411,5663,793,626&per_page=100&_fields=id,media_details": "api/91ac78ea4630.json"
+ "/wp-json/wp/v2/project?include=6027,1692,2599,3258,4767,4810,5978,5759,5942,3234,6017,5727,5404,5411,4904,2149,5986,5423,3856,4072,5904,3670,4815,262,4195,5587,4006,622,5752,4064,3897,2875,3028,5847&per_page=100&_fields=id,title,excerpt,featured_media": "api/ee745b0bff90.json",
+ "/wp-json/wp/v2/media?include=4198,5442,2678,5982,5946,5909,5848,5763,5756,5732,5591,5471,5416,5409,5719,4970,5674,5284,4818,4814,4771,5671,4266,4073,4069,4658,3857,3676,4271,3238,4411,5663,793,626&per_page=100&_fields=id,media_details": "api/a2d62df38c1f.json"
 }

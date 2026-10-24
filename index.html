@@ -790,7 +790,16 @@ img.wp-image-4176 {
 .wp-block-post-content .wp-block-columns.mrf-intro>.wp-block-column+.wp-block-column{margin-left:2.5rem}
 }
 .wp-block-post-content .mrf-intro .wp-block-embed{margin:0}
-.wp-block-post-content .mrf-zusammenarbeit{margin-bottom:.5rem;text-align:center}</style><style data-noptimize="1" id="mrf-dsee-stil">/* Aenderung 59 — DSEE-Foerderlogo (3-zeilig, RGB), erstes Logo der Partner- und Stiftungswand.
+.wp-block-post-content .mrf-zusammenarbeit{margin-bottom:.5rem;text-align:center}</style><style data-noptimize="1" id="mrf-symmetrie-stil">/* Aenderung 77 — Startseite, Block „Wir forsten heimische Waelder auf" (Leo, 24.10.2026: Text mittig zum Video).
+   Die Regel .mrf-intro { align-items: center } im Block mrf-videos-stil (Aenderung 36) wirkt nie, weil WordPress
+   .wp-block-columns { align-items: normal !important } setzt. Deshalb align-self an den Spalten, ab 1001 px
+   (bis 1000 px stapelt die Theme Text und Video). Ist der Text hoeher als das Video, steht das Video mittig neben
+   dem Text: gleicher Abstand oben und unten. Spalten 45/55 bleiben: bei 1440 px kleinster Hoehenunterschied
+   (104 px; 50/50: 138, 55/45: 115, 40/60: 128). Nur Layout, kein Text. */
+@media (width > 1000px) {
+	.wp-block-post-content .wp-block-columns.mrf-intro > .wp-block-column { align-self: center; }
+	.wp-block-post-content .wp-block-columns.mrf-intro > .wp-block-column > :last-child { margin-bottom: 0; }
+}</style><style data-noptimize="1" id="mrf-dsee-stil">/* Aenderung 59 — DSEE-Foerderlogo (3-zeilig, RGB), erstes Logo der Partner- und Stiftungswand.
    Die Datei enthaelt den Schutzraum der DSEE (darf nicht veraendert werden), deshalb gilt die
    Hoehe fuer die ganze Datei. Tinte = 69 % der Breite, 45,5 % der Hoehe.
    Desktop 92 px  → Tinte ca. 110 x 42 px, gleiche Flaeche wie die Nachbarn (Tintenmass, Aenderung 17).

@@ -3,12 +3,341 @@
       s.src='/myreforest-vorschau/wp-content/themes/samreciter-essentials-myreforest/js/scroll-timeline-polyfill.js';
       s.defer=true;
       document.head.appendChild(s)}</script> <link media="all" href="/myreforest-vorschau/wp-content/cache/autoptimize/css/autoptimize_3a88a46039c59ac4f220b6dcbd7e4854.css" rel="stylesheet"><title>Baum verschenken mit persönlicher Baumurkunde – myreforest</title><link rel="dns-prefetch" href="//myreforest.org"><link rel="alternate" type="application/rss+xml" title="myreforest » Feed" href="/myreforest-vorschau/feed/"><link rel="alternate" type="application/rss+xml" title="myreforest » Comments Feed" href="/myreforest-vorschau/comments/feed/"><link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/myreforest-vorschau/wp-json/oembed/1.0/embed?url=%2Fmyreforest-vorschau%2Fbaum-verschenken%2F&amp;lang=de"><link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/myreforest-vorschau/wp-json/oembed/1.0/embed?url=%2Fmyreforest-vorschau%2Fbaum-verschenken%2F&amp;format=xml&amp;lang=de"><style id="core-block-supports-inline-css">.wp-container-content-9cfa9a5a{flex-grow:1;}.wp-container-core-group-is-layout-91ba53a3{flex-wrap:nowrap;align-items:flex-end;}.wp-elements-82816738e5484a4c3e9bf72518e25346 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--contrast);}.wp-container-core-columns-is-layout-7387b849{flex-wrap:nowrap;}.wp-container-core-buttons-is-layout-3e41869c{justify-content:center;}.wp-elements-8d80e8c1156a611222975a8ae83aa9c2 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--contrast);}.wp-container-core-navigation-is-layout-2c90304e{flex-direction:column;align-items:flex-start;}.wp-container-core-group-is-layout-c2ddf617{flex-wrap:nowrap;justify-content:space-between;align-items:flex-start;}.wp-container-core-group-is-layout-f56f9fcf{flex-wrap:nowrap;justify-content:center;}
-/*# sourceURL=core-block-supports-inline-css */</style><link rel="stylesheet" id="cmplz-banner-1-optin-css" href="https://myreforest.org/wp-content/uploads/complianz/css/banner-1-optin.css?ver=1791203488" media="all"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/myreforest-vorschau/xmlrpc.php?rsd"><link rel="canonical" href="https://myreforest.org/baum-verschenken/"><link rel="shortlink" href="/myreforest-vorschau/?p=6073"> <script id="wp-importmap" type="importmap">{"imports":{"@wordpress/interactivity":"/myreforest-vorschau/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1"}}</script> <link rel="modulepreload" href="/myreforest-vorschau/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low"><meta name="robots" content="noindex,nofollow,noarchive">
+/*# sourceURL=core-block-supports-inline-css */</style><link rel="stylesheet" id="cmplz-banner-1-optin-css" href="https://myreforest.org/wp-content/uploads/complianz/css/banner-1-optin.css?ver=1791203488" media="all"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/myreforest-vorschau/xmlrpc.php?rsd"><link rel="canonical" href="https://myreforest.org/baum-verschenken/"><link rel="shortlink" href="/myreforest-vorschau/?p=6073"> <script id="wp-importmap" type="importmap">{"imports":{"@wordpress/interactivity":"/myreforest-vorschau/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1"}}</script> <link rel="modulepreload" href="/myreforest-vorschau/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low"><style id="mrf-bv-stil" data-noptimize="1">/* myreforest — /baum-verschenken/ Gestaltung (Änderung 105, 12.11.2026). Nur diese Seite. Zum Zurücknehmen: Plugin entfernen. */
+.mrf-bv.mrf-bv {
+	--bv-text: var(--wp--preset--color--standard, rgb(62 59 57));
+	--bv-gruen: var(--wp--preset--color--highlight, rgb(78 157 47));
+	--bv-dunkel: var(--wp--preset--color--dark, rgb(76 140 48));
+	--bv-hell: var(--wp--preset--color--light, rgb(157 196 26));
+	--bv-flaeche: rgb(243 248 240);
+	--bv-flaeche-tief: rgb(231 241 226);
+	--bv-linie: rgb(78 157 47 / .22);
+	--bv-schatten: 102 35% 5%;
+	--bv-blatt: 0 2rem;
+	--bv-breite: 72rem;
+	--bv-abschnitt: clamp(4rem, 2.5rem + 4.5vw, 7rem);
+}
+
+/* ---------- Raster: eine Spalte (Handy/Tablet), zwei Spalten ab 1001 px ---------- */
+.mrf-bv.mrf-bv .wp-block-post-content {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	align-items: start;
+	padding-inline: 1rem;
+	padding-block-start: clamp(0rem, -2rem + 5vw, 2.5rem);
+}
+.mrf-bv.mrf-bv .wp-block-post-content > * {
+	grid-column: 1 / -1;
+	max-width: none;
+	margin-inline: 0 !important;
+	margin-block: 0;
+	box-sizing: border-box;
+}
+
+/* ---------- Titel + Einleitung ---------- */
+.mrf-bv.mrf-bv .wp-block-post-content > h1.wp-block-post-title {
+	font-size: clamp(2.05rem, 1.3rem + 2.7vw, 3.4rem);
+	font-weight: 300;
+	line-height: 1.12;
+	letter-spacing: -.02em;
+	max-width: 15em;
+	-webkit-hyphens: manual;
+	hyphens: manual;
+	text-wrap: balance;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > h1.wp-block-post-title::before {
+	content: "";
+	display: block;
+	width: 2.75rem;
+	height: 4px;
+	margin-block-end: 1.5rem;
+	border-radius: 0 4px;
+	background: var(--bv-gruen);
+}
+.mrf-bv.mrf-bv .wp-block-post-content > h1 + p {
+	margin-block-start: clamp(1.25rem, 1rem + 1vw, 2rem);
+	max-width: 38rem;
+	font-size: clamp(1.2rem, 1.08rem + .45vw, 1.45rem);
+	font-weight: 300;
+	line-height: 1.55;
+	text-wrap: pretty;
+}
+
+/* ---------- Abschnittsüberschriften: Haarlinie mit grünem Anfang ---------- */
+.mrf-bv.mrf-bv .wp-block-post-content > h2 {
+	position: relative;
+	margin-block-start: var(--bv-abschnitt);
+	padding-block-start: 1.35rem;
+	border-top: 1px solid var(--bv-linie);
+	font-size: clamp(1.55rem, 1.3rem + .95vw, 2.25rem);
+	font-weight: 350;
+	line-height: 1.2;
+	letter-spacing: -.012em;
+	-webkit-hyphens: manual;
+	hyphens: manual;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > h2::before {
+	content: "";
+	position: absolute;
+	inset-block-start: -2px;
+	inset-inline-start: 0;
+	width: 2.75rem;
+	height: 3px;
+	background: var(--bv-gruen);
+}
+
+/* ---------- Drei Schritte: Karten in Blattform ---------- */
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1rem;
+	margin-block-start: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+	flex-direction: initial;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	margin: 0;
+	overflow: hidden;
+	border-radius: var(--bv-blatt);
+	background: var(--bv-flaeche);
+	box-shadow: inset 0 0 0 1px rgb(78 157 47 / .08);
+	box-sizing: border-box;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > figure {
+	margin: 0;
+	overflow: hidden;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > p {
+	margin: 0;
+	padding: 1.15rem 1.35rem 1.5rem;
+	font-size: 1.1rem;
+	line-height: 1.55;
+	text-wrap: pretty;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > p strong {
+	display: inline-block;
+	margin-block-end: .3rem;
+	font-size: 1.2em;
+	font-weight: 500;
+	letter-spacing: -.005em;
+	color: var(--bv-text);
+}
+/* Urkunde: ganz zeigen, als Blatt auf getönter Fläche (statt Anschnitt mit weißem Rand) */
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns figure:has(> img.wp-image-5108) {
+	background:
+		radial-gradient(90% 120% at 50% 0%, rgb(157 196 26 / .16), transparent 70%),
+		var(--bv-flaeche-tief);
+}
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns figure > img.wp-image-5108 {
+	object-fit: contain !important;
+	object-position: 50% 50% !important;
+	padding: 1rem 0 .9rem;
+	box-sizing: border-box;
+	transform: rotate(-2deg);
+	filter: drop-shadow(0 1px 1px hsl(var(--bv-schatten) / .18)) drop-shadow(0 .6rem .9rem hsl(var(--bv-schatten) / .2));
+}
+
+/* ---------- Textabschnitte; Weihnachts-Hinweis als Fläche ---------- */
+.mrf-bv.mrf-bv .wp-block-post-content > h2 ~ p:not(.has-text-align-center) {
+	margin-block-start: 1.1rem;
+	max-width: 40rem;
+	text-wrap: pretty;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) + p {
+	margin-block-start: 1.25rem;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) + p + p {
+	margin-block-start: 1.5rem;
+	padding: 1.15rem 1.4rem 1.25rem;
+	border-radius: 0 1.25rem;
+	background: var(--bv-flaeche);
+	box-shadow: inset 3px 0 0 var(--bv-gruen);
+}
+
+/* ---------- Abschluss: Preis + Knopf als eine Fläche ---------- */
+.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-spacer:has(+ p.has-text-align-center) {
+	display: none;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > p.has-text-align-center:has(+ .wp-block-buttons) {
+	margin-block-start: var(--bv-abschnitt);
+	padding: clamp(2.25rem, 1.75rem + 2vw, 3.5rem) 1.5rem 0;
+	border-radius: 0 2rem 0 0;
+	background:
+		radial-gradient(70% 160% at 50% 0%, rgb(157 196 26 / .17), transparent 70%),
+		var(--bv-flaeche);
+	font-size: clamp(1.4rem, 1.15rem + 1vw, 1.9rem) !important;
+	font-weight: 300;
+	line-height: 1.3;
+	letter-spacing: -.01em;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > p.has-text-align-center:has(+ .wp-block-buttons) strong {
+	font-weight: 500;
+}
+.mrf-bv.mrf-bv .wp-block-post-content > p.has-text-align-center + .wp-block-buttons {
+	margin-block-start: 0;
+	padding: clamp(1.25rem, 1rem + 1vw, 1.75rem) 1.5rem clamp(2.25rem, 1.75rem + 2vw, 3.5rem);
+	border-radius: 0 0 0 2rem;
+	background: var(--bv-flaeche);
+	box-sizing: border-box;
+}
+.mrf-bv.mrf-bv .wp-block-post-content .wp-block-buttons .wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: .7rem;
+	min-height: 3.25rem;
+	padding: .95rem 1.85rem;
+	box-sizing: border-box;
+	border-radius: 4px !important;
+	background-color: var(--bv-dunkel) !important;
+	color: #fff !important;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: .005em;
+	text-decoration: none;
+	box-shadow: 0 1px 2px hsl(var(--bv-schatten) / .2), 0 .5rem 1.25rem -.35rem hsl(102 45% 22% / .45);
+	transition: background-color .2s ease, transform .2s cubic-bezier(.2, .8, .2, 1), box-shadow .2s ease;
+}
+.mrf-bv.mrf-bv .wp-block-post-content .wp-block-buttons .wp-block-button__link::after {
+	content: "";
+	flex: none;
+	width: 1.15em;
+	height: 1.15em;
+	background: currentColor;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h15M13 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h15M13 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+	transition: transform .2s cubic-bezier(.2, .8, .2, 1);
+}
+@media (hover: hover) {
+	.mrf-bv.mrf-bv .wp-block-post-content .wp-block-buttons .wp-block-button__link:hover {
+		background-color: rgb(62 116 39) !important;
+		transform: translateY(-1px);
+		box-shadow: 0 1px 2px hsl(var(--bv-schatten) / .2), 0 .75rem 1.6rem -.4rem hsl(102 45% 22% / .5);
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content .wp-block-buttons .wp-block-button__link:hover::after {
+		transform: translateX(3px);
+	}
+}
+.mrf-bv.mrf-bv .wp-block-post-content .wp-block-buttons .wp-block-button__link:active {
+	transform: translateY(1px) scale(.98);
+	box-shadow: 0 1px 2px hsl(var(--bv-schatten) / .25);
+}
+.mrf-bv.mrf-bv .wp-block-post-content .wp-block-buttons .wp-block-button__link:focus-visible {
+	outline: 3px solid var(--bv-text);
+	outline-offset: 3px;
+}
+
+/* ---------- Tablet 600–1000 px: Lesebreite, Karten quer (Bild links) ---------- */
+@media (600px <= width <= 1000px) {
+	.mrf-bv.mrf-bv .wp-block-post-content {
+		padding-inline: max(5vw, (100% - 44rem) / 2);
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column {
+		display: grid;
+		grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+		align-items: center;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > figure {
+		align-self: stretch;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > figure img {
+		height: 100%;
+		aspect-ratio: 4 / 3 !important;
+	}
+}
+
+/* ---------- Handy < 600 px ---------- */
+@media (width < 600px) {
+	.mrf-bv.mrf-bv { --bv-blatt: 0 1.5rem; }
+	.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > p {
+		padding: 1rem 1.15rem 1.3rem;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > p.has-text-align-center + .wp-block-buttons .wp-block-button,
+	.mrf-bv.mrf-bv .wp-block-post-content > p.has-text-align-center + .wp-block-buttons .wp-block-button__link {
+		width: 100%;
+	}
+}
+
+/* ---------- Desktop ab 1001 px: Überschrift links, Text rechts; drei Karten nebeneinander ---------- */
+@media (width > 1000px) {
+	.mrf-bv.mrf-bv .wp-block-post-content {
+		grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+		column-gap: clamp(2.5rem, 5vw, 5rem);
+		padding-inline: max(5vw, (100% - var(--bv-breite)) / 2);
+	}
+	/* Titel links, Einleitung rechts auf Höhe der ersten Titelzeile (gleiches Raster wie die Textabschnitte) */
+	.mrf-bv.mrf-bv .wp-block-post-content > h1.wp-block-post-title {
+		grid-column: 1;
+		font-size: clamp(2.4rem, 1.2rem + 2vw, 3rem);
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > h1 + p {
+		grid-column: 2;
+		margin-block-start: calc(4px + 1.7rem);
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column > figure img {
+		aspect-ratio: 4 / 3 !important;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) {
+		grid-column: 1;
+		grid-row: span 2;
+		padding-inline-end: 1rem;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) ~ p:not(.has-text-align-center) {
+		grid-column: 2;
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) + p {
+		margin-block-start: var(--bv-abschnitt);
+		padding-block-start: 1.35rem;
+		border-top: 1px solid var(--bv-linie);
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) ~ h2 {
+		margin-block-start: clamp(4rem, 2.5rem + 3.5vw, 6rem);
+	}
+	.mrf-bv.mrf-bv .wp-block-post-content > h2:not(:has(+ .wp-block-columns)) ~ h2 + p {
+		margin-block-start: clamp(4rem, 2.5rem + 3.5vw, 6rem);
+	}
+}
+
+/* ---------- Sanfte Einblendung beim Scrollen (ohne JavaScript) ---------- */
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.mrf-bv.mrf-bv .wp-block-post-content > h2,
+		.mrf-bv.mrf-bv .wp-block-post-content > h2 ~ p:not(.has-text-align-center),
+		.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column {
+			animation: mrf-bv-auf linear both;
+			animation-timeline: view();
+			animation-range: entry 0% cover 22%;
+			animation-timing-function: cubic-bezier(.2, .7, .2, 1);
+		}
+		.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column:nth-child(2) {
+			animation-range: entry 8% cover 28%;
+		}
+		.mrf-bv.mrf-bv .wp-block-post-content > .wp-block-columns > .wp-block-column:nth-child(3) {
+			animation-range: entry 16% cover 34%;
+		}
+	}
+}
+@keyframes mrf-bv-auf {
+	from { opacity: 0; transform: translateY(1.75rem); }
+	to { opacity: 1; transform: none; }
+}</style><meta name="robots" content="noindex,nofollow,noarchive">
 <script>(function(){var K={},B="/myreforest-vorschau";
 function m(u){try{var p=String(u).replace(location.origin,'').replace(B,'');for(var k in K){if(p===k||p===k.replace(/&_locale=user$/,''))return B+'/'+K[k];}}catch(e){}return null;}
 var f=window.fetch;window.fetch=function(u,o){var r=m(typeof u==='string'?u:(u&&u.url));return f.call(this,r||u,r?undefined:o);};
 var X=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(me,u){var r=m(u);return X.apply(this,[me,r||u].concat([].slice.call(arguments,2)));};})();</script>
-<style>#mrf-vorschau{position:fixed;left:0;right:0;bottom:0;z-index:2147483647;pointer-events:none;background:#24231f;color:#fff;font:500 13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;padding:9px 14px;text-align:center;letter-spacing:.01em}#mrf-vorschau b{color:#9ecb74;font-weight:600}.samreciter-header .wp-block-samreciter-donation-button.samreciter-spende-sticky{bottom:4.5rem!important}@media(max-width:600px){#mrf-vorschau{font-size:12px;padding:8px 10px}.samreciter-header .wp-block-samreciter-donation-button.samreciter-spende-sticky{bottom:4.75rem!important}}</style></head><body data-cmplz="1" class="wp-singular page-template-default page page-id-6073 wp-embed-responsive wp-theme-samreciter-essentials wp-child-theme-samreciter-essentials-myreforest cmplz-functional cmplz-eu cmplz-optin"><div id="cmplz-cookiebanner-container"><div id="cmplz-cookiebanner-1-optin" class="cmplz-cookiebanner banner-1 bottom-right-minimal optin cmplz-bottom-right cmplz-categories-type-view-preferences cmplz-show" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin"><div class="cmplz-header"><div class="cmplz-logo"></div><div class="cmplz-title" id="cmplz-header-1-optin">Cookie-Zustimmung verwalten</div><div class="cmplz-close" tabindex="0" role="button" aria-label="Close dialog"> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div></div><div class="cmplz-divider cmplz-divider-header"></div><div class="cmplz-body"><div class="cmplz-message" id="cmplz-message-1-optin">Wir verwenden Cookies, um unsere Website und unseren Service zu optimieren.</div><div class="cmplz-categories"><div class="cmplz-category cmplz-functional"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-functional-1-optin">Funktional</span> <span class="cmplz-always-active"> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-functional-optin" data-category="cmplz_functional" class="cmplz-consent-checkbox cmplz-functional" size="40" value="1"> <label class="cmplz-label" for="cmplz-functional-optin"><span class="screen-reader-text">Funktional</span></label> </span> Always active </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-functional-1-optin" aria-labelledby="cmplz-title-functional-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-functional-1-optin" hidden=""> <span class="cmplz-description-functional">Die technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.</span></div></div><div class="cmplz-category cmplz-preferences"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-preferences-1-optin">Vorlieben</span> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-preferences-optin" data-category="cmplz_preferences" class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1"> <label class="cmplz-label" for="cmplz-preferences-optin"><span class="screen-reader-text">Vorlieben</span></label> </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-preferences-1-optin" aria-labelledby="cmplz-title-preferences-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-preferences-1-optin" hidden=""> <span class="cmplz-description-preferences">Die technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.</span></div></div><div class="cmplz-category cmplz-statistics"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-statistics-1-optin">Statistiken</span> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-statistics-optin" data-category="cmplz_statistics" class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1"> <label class="cmplz-label" for="cmplz-statistics-optin"><span class="screen-reader-text">Statistiken</span></label> </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-statistics-1-optin" aria-labelledby="cmplz-title-statistics-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-statistics-1-optin" hidden=""> <span class="cmplz-description-statistics">Die technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.</span> <span class="cmplz-description-statistics-anonymous">Die technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.</span></div></div><div class="cmplz-category cmplz-marketing"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-marketing-1-optin">Marketing</span> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-marketing-optin" data-category="cmplz_marketing" class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1"> <label class="cmplz-label" for="cmplz-marketing-optin"><span class="screen-reader-text">Marketing</span></label> </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-marketing-1-optin" aria-labelledby="cmplz-title-marketing-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-marketing-1-optin" hidden=""> <span class="cmplz-description-marketing">Die technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.</span></div></div></div></div><div class="cmplz-links cmplz-information"><ul><li><a class="cmplz-link cmplz-manage-options cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li><li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-cookies-overview" data-relative_url="#cmplz-cookies-overview">Manage services</a></li><li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-tcf-wrapper" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li><li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li></ul></div><div class="cmplz-divider cmplz-footer"></div><div class="cmplz-buttons"> <button class="cmplz-btn cmplz-accept">Akzeptieren</button> <button class="cmplz-btn cmplz-deny">Ablehnen</button> <button class="cmplz-btn cmplz-view-preferences">Vorlieben</button> <button class="cmplz-btn cmplz-save-preferences">Einstellungen speichern</button> <a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Vorlieben</a></div><div class="cmplz-documents cmplz-links"><ul><li><a class="cmplz-link cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/" data-relative_url="">Cookie-Richtlinie </a></li><li><a class="cmplz-link privacy-statement" href="/myreforest-vorschau/datenschutzerklaerung/" data-relative_url="">Datenschutzerklärung</a></li><li><a class="cmplz-link impressum" href="/myreforest-vorschau/impressum/" data-relative_url="">Impressum</a></li></ul></div></div></div> <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Skip to content</a><div class="wp-site-blocks"><header class="samreciter-header wp-block-template-part"> <script data-noptimize="1">/* myreforest — Firefox: kurz schwarzes Logo + Menübaum beim Seitenwechsel. 05.10.2026.
+<style>#mrf-vorschau{position:fixed;left:0;right:0;bottom:0;z-index:2147483647;pointer-events:none;background:#24231f;color:#fff;font:500 13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;padding:9px 14px;text-align:center;letter-spacing:.01em}#mrf-vorschau b{color:#9ecb74;font-weight:600}.samreciter-header .wp-block-samreciter-donation-button.samreciter-spende-sticky{bottom:4.5rem!important}@media(max-width:600px){#mrf-vorschau{font-size:12px;padding:8px 10px}.samreciter-header .wp-block-samreciter-donation-button.samreciter-spende-sticky{bottom:4.75rem!important}}</style></head><body data-cmplz="1" class="wp-singular page-template-default page page-id-6073 wp-embed-responsive wp-theme-samreciter-essentials wp-child-theme-samreciter-essentials-myreforest mrf-bv cmplz-functional cmplz-eu cmplz-optin"><div id="cmplz-cookiebanner-container"><div id="cmplz-cookiebanner-1-optin" class="cmplz-cookiebanner banner-1 bottom-right-minimal optin cmplz-bottom-right cmplz-categories-type-view-preferences cmplz-show" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin"><div class="cmplz-header"><div class="cmplz-logo"></div><div class="cmplz-title" id="cmplz-header-1-optin">Cookie-Zustimmung verwalten</div><div class="cmplz-close" tabindex="0" role="button" aria-label="Close dialog"> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div></div><div class="cmplz-divider cmplz-divider-header"></div><div class="cmplz-body"><div class="cmplz-message" id="cmplz-message-1-optin">Wir verwenden Cookies, um unsere Website und unseren Service zu optimieren.</div><div class="cmplz-categories"><div class="cmplz-category cmplz-functional"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-functional-1-optin">Funktional</span> <span class="cmplz-always-active"> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-functional-optin" data-category="cmplz_functional" class="cmplz-consent-checkbox cmplz-functional" size="40" value="1"> <label class="cmplz-label" for="cmplz-functional-optin"><span class="screen-reader-text">Funktional</span></label> </span> Always active </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-functional-1-optin" aria-labelledby="cmplz-title-functional-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-functional-1-optin" hidden=""> <span class="cmplz-description-functional">Die technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.</span></div></div><div class="cmplz-category cmplz-preferences"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-preferences-1-optin">Vorlieben</span> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-preferences-optin" data-category="cmplz_preferences" class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1"> <label class="cmplz-label" for="cmplz-preferences-optin"><span class="screen-reader-text">Vorlieben</span></label> </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-preferences-1-optin" aria-labelledby="cmplz-title-preferences-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-preferences-1-optin" hidden=""> <span class="cmplz-description-preferences">Die technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.</span></div></div><div class="cmplz-category cmplz-statistics"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-statistics-1-optin">Statistiken</span> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-statistics-optin" data-category="cmplz_statistics" class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1"> <label class="cmplz-label" for="cmplz-statistics-optin"><span class="screen-reader-text">Statistiken</span></label> </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-statistics-1-optin" aria-labelledby="cmplz-title-statistics-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-statistics-1-optin" hidden=""> <span class="cmplz-description-statistics">Die technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.</span> <span class="cmplz-description-statistics-anonymous">Die technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.</span></div></div><div class="cmplz-category cmplz-marketing"><div class="cmplz-category-header"> <span class="cmplz-category-title" id="cmplz-title-marketing-1-optin">Marketing</span> <span class="cmplz-banner-checkbox"> <input type="checkbox" id="cmplz-marketing-optin" data-category="cmplz_marketing" class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1"> <label class="cmplz-label" for="cmplz-marketing-optin"><span class="screen-reader-text">Marketing</span></label> </span> <button class="cmplz-category-toggle" aria-expanded="false" aria-controls="cmplz-desc-marketing-1-optin" aria-labelledby="cmplz-title-marketing-1-optin"> <span class="cmplz-icon cmplz-open"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg> </span> </button></div><div class="cmplz-description" id="cmplz-desc-marketing-1-optin" hidden=""> <span class="cmplz-description-marketing">Die technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.</span></div></div></div></div><div class="cmplz-links cmplz-information"><ul><li><a class="cmplz-link cmplz-manage-options cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li><li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-cookies-overview" data-relative_url="#cmplz-cookies-overview">Manage services</a></li><li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-tcf-wrapper" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li><li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li></ul></div><div class="cmplz-divider cmplz-footer"></div><div class="cmplz-buttons"> <button class="cmplz-btn cmplz-accept">Akzeptieren</button> <button class="cmplz-btn cmplz-deny">Ablehnen</button> <button class="cmplz-btn cmplz-view-preferences">Vorlieben</button> <button class="cmplz-btn cmplz-save-preferences">Einstellungen speichern</button> <a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Vorlieben</a></div><div class="cmplz-documents cmplz-links"><ul><li><a class="cmplz-link cookie-statement" href="/myreforest-vorschau/cookie-richtlinie-eu/" data-relative_url="">Cookie-Richtlinie </a></li><li><a class="cmplz-link privacy-statement" href="/myreforest-vorschau/datenschutzerklaerung/" data-relative_url="">Datenschutzerklärung</a></li><li><a class="cmplz-link impressum" href="/myreforest-vorschau/impressum/" data-relative_url="">Impressum</a></li></ul></div></div></div> <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Skip to content</a><div class="wp-site-blocks"><header class="samreciter-header wp-block-template-part"> <script data-noptimize="1">/* myreforest — Firefox: kurz schwarzes Logo + Menübaum beim Seitenwechsel. 05.10.2026.
 
    Was es heilt: In Firefox (nicht Chrome) erscheint beim Klick im Menü oder auf den
    Sprachwechsel für ein Bild ein großes schwarzes myreforest-Logo in der Mitte und links
